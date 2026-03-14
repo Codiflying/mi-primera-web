@@ -1,6 +1,134 @@
-body{
-    background-color: #7FB3D5;
+:root {
+  --bg: #f4f8fb;
+  --accent: #2f6f8f;
+  --accent-dark: #234f66;
+  --text: #1f2d3a;
+  --card: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
 
+.hero {
+  background: linear-gradient(120deg, #d5e7f2, #b8d9ec);
+  padding: 1.5rem 1.2rem 4rem;
+}
+
+.nav {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero-content {
+  max-width: 980px;
+  margin: 3rem auto 0;
+}
+
+.hero-content h1 {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+  color: var(--accent-dark);
+}
+
+.hero-content p {
+  max-width: 680px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 3rem 1.2rem;
+}
+
+.cards,
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card,
+.product {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(20, 52, 74, 0.08);
+}
+
+.section-soft {
+  background: #ecf4f9;
+  border-top: 1px solid #dbe8f1;
+  border-bottom: 1px solid #dbe8f1;
+}
+
+.section-intro {
+  margin-top: -0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.product span {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  color: #4d5d68;
+}
+
+@media (max-width: 650px) {
+  .nav {
+    flex-direction: column;
+  }
+}
